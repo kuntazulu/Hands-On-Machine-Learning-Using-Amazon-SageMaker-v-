@@ -98,8 +98,8 @@ def train():
         data_df = pd.read_csv(data_input_file, header=None)
 
         # labels are in the first column
-        labels = data_df.ix[:, 0]
-        features = data_df.ix[:, 1:]
+        labels = data_df.iloc[:, 0]
+        features = data_df.iloc[:, 1:]
 
         train_features, test_features, labels_train, labels_test = \
             train_test_split(
